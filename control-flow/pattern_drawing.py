@@ -8,5 +8,8 @@ row = 0
 
 # Loop through each row using while
 while row < size:
-    # For each row, we will print stars later
+    # Print stars in the row using a for loop
+    for col in range(size):
+        print("*", end="")  # Print star without new line
+    print()  # Move to the next line after one row
     row += 1
