@@ -19,3 +19,9 @@ match priority:
         reminder = f"'{task}' is a low priority task."
     case _:
         reminder = f"'{task}' has an unknown priority."
+
+# Adjust reminder if task is time-sensitive
+if time_bound == "yes":
+    reminder += " That requires immediate attention today!"
+else:
+    reminder += " Consider completing it when you have free time."
