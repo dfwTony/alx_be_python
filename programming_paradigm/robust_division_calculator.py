@@ -1,19 +1,21 @@
-# main.py
-import sys
-from robust_division_calculator import safe_divide
+# robust_division_calculator.py
 
-def main():
-    # Check correct number of arguments (script + 2 numbers = 3)
-    if len(sys.argv) != 3:
-        print("Usage: python main.py <numerator> <denominator>")
-        sys.exit(1)
+def safe_divide(numerator, denominator):
+    """
+    Perform safe division with error handling.
+    Returns result or an error message as a string.
+    """
+    try:
+        # Convert inputs to floats (may raise ValueError)
+        num = float(numerator)
+        den = float(denominator)
 
-    numerator = sys.argv[1]
-    denominator = sys.argv[2]
+        try:
+            # Attempt division (may raise ZeroDivisionError)
+            result = num / den
+            return f"The result of the division is {result}"
+        except ZeroDivisionError:
+            return "Error: Cannot divide by zero."
 
-    # Call the safe_divide function
-    result = safe_divide(numerator, denominator)
-    print(result)
-
-if __name__ == "__main__":
-    main()
+    except ValueError:
+        return "Error: Please enter numeric values only."
