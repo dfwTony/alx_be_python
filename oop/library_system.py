@@ -35,14 +35,15 @@ class Library:
         for book in self.books:
             print(book)
 
-library = Library()
+if __name__ == "__main__":  # prevents double execution
+    library = Library()
 
-book1 = Book("Pride and Prejudice", "Jane Austen")
-ebook1 = EBook("Snow Crash", "Neal Stephenson", 500)
-printbook1 = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
+    book1 = Book("Pride and Prejudice", "Jane Austen")
+    ebook1 = EBook("Snow Crash", "Neal Stephenson", 500)
+    printbook1 = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
 
-library.add_book(book1)
-library.add_book(ebook1)
-library.add_book(printbook1)
+    library.add_book(book1)
+    library.add_book(ebook1)
+    library.add_book(printbook1)
 
-library.list_books()
+    library.list_books()
