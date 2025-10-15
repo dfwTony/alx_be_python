@@ -1,5 +1,5 @@
-length = 10
-width = 5
+length = int(input("input the length of the rectangle: "))
+width = int(input("input  the Width of the rectangle: "))
 
 area = length * width
 
