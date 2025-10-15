@@ -1,6 +1,6 @@
-principal = 1000
+principal = int(input("Input your Principal amount: "))
 rate = 0.05
-time = 3
+time = int(input("For what period do you want to invest: "))
 
 interest = principal * rate * time
 
