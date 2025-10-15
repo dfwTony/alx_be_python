@@ -17,3 +17,10 @@ def perform_operation(num1, num2, operation):
         return num1 / num2
     else:
         return "Error: Invalid operation"
+    
+num1 = int(input("Enter your number 1: "))
+num2 = int(input("Enter your number 2: "))
+
+operations = perform_operation(num1, num2, input("Choose an operation (add/subtract/multiply/divide): ").lower())
+
+print(operations)
